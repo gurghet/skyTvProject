@@ -1,0 +1,26 @@
+body {
+  display: flex;
+  flex-flow: column;
+}
+
+header, footer {
+  width: 100%;
+  text-align: center;
+}
+
+#content {
+  display: flex;
+  flex-flow: row;
+}
+
+#sports {
+  flex: 2 0 0
+}
+
+#news {
+  flex: 2 0 0
+}
+
+#basket {
+  flex: 1 0 0
+}

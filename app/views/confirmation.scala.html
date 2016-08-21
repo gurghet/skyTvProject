@@ -1,0 +1,17 @@
+@(customerId: String, orderedProductUuids: Set[String])
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Order Confirmation</title>
+    </head>
+    <body>
+        <h1>Order Confirmation</h1>
+        <p>Congratulations @customerId, you just ordered:</p>
+        <ul>
+        @for(uuid <- orderedProductUuids) {
+            <li>@uuid</li>
+        }
+        <ul>
+    </body>
+</html>
