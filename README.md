@@ -1,39 +1,24 @@
-# play-slick-rest
-The Play Slick Rest is a very simple json rest api showing one way of using Play Framework 2.5 with [slick 3](https://github.com/slick/slick) library for database access.
+# SkyTv Project
 
+A simple select page with a confirmation button
 
-It supports the following features:
+## How to use
 
-* Generic Data Access Objects, create a DAOS with crud for an entity with just one line using DI
-* Models as case classes and slick models, independent from database driver and profile
+The following assumes sbt is installed and Chrome is used.
 
-The project was thought to be used as an activator template.
+To build the application, simply navigate this folder and run
 
-#Running
+    sbt
 
-The database pre-configured is an h2, so you just have to:
+and then `run`.
 
+Visit `http://localhost:9000`. You will receive an error message saying "Oops, you are not connected".
+To artificially set up a cookie open the browser console and type
 
-        $ sbt run
+    document.cookie="customerID=John"
 
-#Testing
+John is known for living in London. Reloading the page will show the listing relative to London.
 
-To run all tests (routes and persistence tests):
+## How to test
 
-
-        $ sbt test
-
-#Using
-
-	curl --request POST localhost:9000/supplier -H "Content-type: application/json" --data "{\"name\" : \"sup1\",\"desc\" : \"low prices\"}"
-
-	curl localhost:9000/supplier/1
-
-#TODO
-
-Tests
-
-#Credits
-
-To make this template, I just mixed the play scala template with play slick.
-
+Running `sbt test` should be sufficient. A web driver for Chrome should be installed.
